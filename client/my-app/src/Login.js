@@ -23,7 +23,7 @@ const Authurl = "https://accounts.spotify.com/authorize?client_id=12a0ce32425144
 export default function Login() {//notice how the function has the same name as the file when using rfc shortcut. IDK if this function must be named the same as the file
     return(
     <Container className="d-flex justify-content-center align-items-center" style ={{minHeight:"100vh"}}> 
-        <a className="btn btn-success btn-lg" href={Authurl}> Login with Spotify or I'll steal your toes</a> 
+        <a className="btn btn-success btn-lg" href={Authurl}> Login with Spotify or I'll call the FBI</a> 
     </Container>
     )
 }

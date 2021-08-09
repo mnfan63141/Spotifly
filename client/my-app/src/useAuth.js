@@ -6,7 +6,7 @@ import React from 'react'
 
 //why doesn't the argument have to be {code}?
 export default function useAuth(code) { //will store access, refresh, and expiresin
-    //he says we don't care about anything being returned we just need it to be a custom hook that saves stuff
+    //we don't care about anything being returned we just need it to be a custom hook that saves stuff
     //we want to get state for the three items needed
     const [accessToken, setAccessToken] = useState();
     const [refreshToken, setRefreshToken] = useState();

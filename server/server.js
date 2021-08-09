@@ -16,8 +16,7 @@ app.use(cors()); //fixes cors errors
 app.use(express.json());
 app.use(express.urlencoded());
 
-//how does app work, is it our server? What is /login for?
-//how does the syntax work, especially with brackets and parentheses?
+
 app.post('/login', (req,res) => { //we want to post a simple login application
     const code = req.body.code; //I thought the code is coming in a response? Or is this related to how the login url generates a code and that's what this is referring to?
         //I think my previous comment is correct cuz the library says "code that's returned as a query param to the redirect URI"
