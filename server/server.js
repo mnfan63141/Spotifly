@@ -18,10 +18,13 @@ app.use(express.urlencoded());
 
 
 app.post('/login', (req,res) => { //we want to post a simple login application
-    const code = req.body.code; //I thought the code is coming in a response? Or is this related to how the login url generates a code and that's what this is referring to?
-        //I think my previous comment is correct cuz the library says "code that's returned as a query param to the redirect URI"
-        //req.body.code requires a body parser package to be installed in server with npm i body-parser
-        //don't actually need body parser for the reason specified in the comment next to bodyParser declaration
+    const code = req.body.code;
+    //I thought the code is coming in a response? Or is this related to how the login url generates a code and that's what this is referring to?
+    
+    //I think my previous comment is correct cuz the library says "code that's returned as a query param to the redirect URI"
+    //req.body.code requires a body parser package to be installed in server with npm i body-parser
+    //don't actually need body parser for the reason specified in the comment next to bodyParser declaration
+    
     const spotAPI = new SpotifyWebApi({ //the following three credentials are what are specifically needed my lin's library api authorization code grant flow 
         redirectUri: 'http://localhost:3000',
         clientId: '12a0ce32425144509017166ad7cc08d3',
@@ -84,7 +87,7 @@ app.get('/traits', (req, res) => {
             })
     })
     .catch((err) => {
-        console.log(err); //appears on command prompt! Whereas consolelogging errors in useAuth appears in browser console!
+        console.log(err);
         res.sendStatus(400)
     })
 })
